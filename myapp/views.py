@@ -4,7 +4,6 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'index.html')
 
-
 def about(request):
     return render(request, 'about.html')
 
@@ -20,9 +19,6 @@ PRODUCTS = {
             {'name': 'Farm cheese', 'description': 'Wholesome cheese for snacks, sandwiches and meals.', 'price': 'From KES 600', 'icon': 'fas fa-cheese', 'image': 'images/c h e e s e.jpg'},
             {'name': 'Fresh cream', 'description': 'Rich cream for desserts, sauces and baking.', 'price': 'From KES 500', 'icon': 'fas fa-glass-whiskey', 'image': 'images/heavycream.jpg'},
             {'name': 'Farm ghee', 'description': 'Traditional clarified butter for cooking and baking.', 'price': 'From KES 700', 'icon': 'fas fa-jar', 'image': 'images/ghee.jpg'},
-            {'name': 'Farm eggs', 'description': 'Fresh eggs from carefully raised hens.', 'price': 'From KES 350', 'icon': 'fas fa-egg', 'image': 'images/eggs.jpg'},
-            {'name': 'Free-range chicken eggs', 'description': 'Wholesome eggs for breakfast, baking and cooking.', 'price': 'From KES 400', 'icon': 'fas fa-egg', 'image': 'images/chickeneggs.jpg'},
-            {'name': 'Free-range duck eggs', 'description': 'Rich, nutritious eggs from free-range ducks.', 'price': 'From KES 450', 'icon': 'fas fa-egg', 'image': 'images/duckeggs.jpg'},
         ],
     },
     'meat': {
@@ -31,7 +27,7 @@ PRODUCTS = {
         'products': [
             {'name': 'Fresh beef', 'description': 'Versatile cuts for family meals and special occasions.', 'price': 'From KES 1,000', 'icon': 'fas fa-drumstick-bite', 'image': 'images/beef.jpg'},
             {'name': 'Farm chicken', 'description': 'Tender chicken for quick and delicious recipes.', 'price': 'From KES 800', 'icon': 'fas fa-drumstick-bite', 'image': 'images/fullchick.jpg'},
-            {'name': 'Chicken sale pack', 'description': 'A value pack of quality chicken for family meals.', 'price': 'From KES 700', 'icon': 'fas fa-drumstick-bite', 'image': 'images/chickensale.jpg'},
+            {'name': 'Chicken sale', 'description': ' Quality matured kienyeji chicken.', 'price': 'From KES 1,500', 'icon': 'fas fa-drumstick-bite', 'image': 'images/chickensale.jpg'},
             {'name': 'Duck meat selection', 'description': 'A flavourful choice for memorable meals.', 'price': 'From KES 1,200', 'icon': 'fas fa-drumstick-bite', 'image': 'images/duckmeat.jpg'},
         ],
     },
@@ -52,9 +48,12 @@ PRODUCTS = {
         'category': 'Chicken, duck and fish',
         'description': 'Fresh poultry and fish for simple, satisfying meals.',
         'products': [
+            {'name': 'Farm eggs', 'description': 'Fresh eggs from carefully raised hens.', 'price': 'From KES 350', 'icon': 'fas fa-egg', 'image': 'images/eggs.jpg'},
+            {'name': 'Free-range chicken eggs', 'description': 'Wholesome eggs for breakfast, baking and cooking.', 'price': 'From KES 400', 'icon': 'fas fa-egg', 'image': 'images/chickeneggs.jpg'},
+            {'name': 'Free-range duck eggs', 'description': 'Rich, nutritious eggs from free-range ducks.', 'price': 'From KES 450', 'icon': 'fas fa-egg', 'image': 'images/duckeggs.jpg'},
             {'name': 'Fresh chicken', 'description': 'Quality chicken for roasting, grilling or stews.', 'price': 'From KES 800', 'icon': 'fas fa-drumstick-bite', 'image': 'images/chicken.jpg'},
             {'name': 'Chicken variety pack', 'description': 'A convenient selection for family meals.', 'price': 'From KES 1,000', 'icon': 'fas fa-drumstick-bite', 'image': 'images/chickenvariety.jpg'},
-            {'name': 'Duck selection', 'description': 'A flavourful choice for memorable meals.', 'price': 'From KES 1,400', 'icon': 'fas fa-feather', 'image': 'images/ducks.jpg'},
+            {'name': 'Duck selection', 'description': 'Pekin ducklings for sale.', 'price': 'From KES 1,000', 'icon': 'fas fa-feather', 'image': 'images/ducks.jpg'},
             {'name': 'Red snapper', 'description': 'Fresh fish selected for quality and taste.', 'price': 'From KES 1,100', 'icon': 'fas fa-fish', 'image': 'images/redsnapper.jpg'},
             {'name': 'Fresh tilapia', 'description': 'Delicate, fresh fish for simple family meals.', 'price': 'From KES 900', 'icon': 'fas fa-fish', 'image': 'images/tilapia.jpg'},
             {'name': 'Fresh juice', 'description': 'Refreshing juice made from ripe seasonal fruit.', 'price': 'From KES 450', 'icon': 'fas fa-glass-whiskey', 'image': 'images/freshjuice.jpg'},
