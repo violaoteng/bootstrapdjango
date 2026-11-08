@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Contact | Sisenye Organics{% endblock %}
+
+{% block content %}
+<section class="container-fluid bg-light py-5">
+    <div class="container py-4">
+        <p class="section-title text-primary">Get in touch</p>
+        <h1 class="display-4 mb-3">We are here to help.</h1>
+        <p class="lead mb-0">Have a question about a product or an order? Send us a message.</p>
+    </div>
+</section>
+<section class="container-xxl py-5" id="contact">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-5">
+                <h2 class="mb-4">Contact details</h2>
+                <p><i class="fa fa-phone-alt text-primary me-3"></i>+012 345 6789</p>
+                <p><i class="fa fa-envelope text-primary me-3"></i>hello@sisenyeorganics.example</p>
+                <p><i class="fa fa-map-marker-alt text-primary me-3"></i>Your location</p>
+            </div>
+            <div class="col-lg-7">
+                <form>
+                    <div class="row g-3">
+                        <div class="col-md-6"><input class="form-control" type="text" placeholder="Your name" aria-label="Your name"></div>
+                        <div class="col-md-6"><input class="form-control" type="email" placeholder="Your email" aria-label="Your email"></div>
+                        <div class="col-12"><input class="form-control" type="text" placeholder="Subject" aria-label="Subject"></div>
+                        <div class="col-12"><textarea class="form-control" rows="5" placeholder="Your message" aria-label="Your message"></textarea></div>
+                        <div class="col-12"><button class="btn btn-secondary rounded-pill py-3 px-5" type="button">Send message</button></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

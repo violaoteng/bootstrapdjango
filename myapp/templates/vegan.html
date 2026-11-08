@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}Vegan Products | Sisenye Organics{% endblock %}
+
+{% block content %}
+
+<section class="container py-5">
+
+    <div class="text-center mb-5">
+        <h1>{{ category.name }}</h1>
+        <p>{{ category.description }}</p>
+    </div>
+
+    <div class="row g-4">
+
+        {% for product in products %}
+
+        <div class="col-md-4">
+
+            <div class="card h-100">
+
+                {% if product.image %}
+                    <img src="{{ product.image.url }}"
+                         class="card-img-top"
+                         alt="{{ product.name }}">
+                {% endif %}
+
+                <div class="card-body">
+
+                    <h5>{{ product.name }}</h5>
+
+                    <p>{{ product.description }}</p>
+
+                    <h6>KSh {{ product.price }}</h6>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% empty %}
+
+        <p>No vegan products available yet.</p>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endblock %}

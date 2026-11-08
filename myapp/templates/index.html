@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home | Sisenye Organics{% endblock %}
+{% block description %}Shop fresh, natural and responsibly sourced products from Sisenye Organics.{% endblock %}
+
+{% block content %}
+
+<header class="hero-section">
+
+    <!-- Background slideshow -->
+    <div class="hero-slides">
+        <img src="{% static 'images/farming.jpg' %}" class="hero-slide slide-one" alt="Organic farming">
+        <img src="{% static 'images/dairyfarming.jpg' %}" class="hero-slide slide-two" alt="Dairy farming">
+    </div>
+
+    <!-- Dark overlay for text readability -->
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <div class="row align-items-center">
+            <div class="col-lg-8 text-white">
+                <p class="fs-5 mb-3">
+                    Fresh from trusted producers
+                </p>
+                <h1 class="display-3 mb-4 text-white">
+                    Better food for your family and community.
+                </h1>
+                <p class="fs-5 mb-5">
+                    Sisenye Organics makes it easy to shop quality
+                    organic food online, with products selected for
+                    freshness, value and honest sourcing.
+                </p>
+                <a href="{% url 'products' %}" class="btn btn-secondary rounded-pill py-3 px-5">Shop products</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5" style="max-width: 650px;">
+            <p class="section-title bg-white text-center text-primary px-3">Shop by category</p>
+            <h2 class="mb-3">Everything you need for a healthier table</h2>
+            <p>Browse our growing range of fresh and organic products.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="border rounded p-4 h-100">
+                    <i class="fa fa-glass-whiskey fa-2x text-primary mb-3"></i>
+                    <h4>Dairy</h4>
+                    <p>Fresh milk, yoghurt and other wholesome dairy essentials.</p>
+                    <a href="{% url 'dairy' %}" class="text-primary">Explore dairy</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="border rounded p-4 h-100">
+                    <i class="fa fa-drumstick-bite fa-2x text-primary mb-3"></i>
+                    <h4>Meat</h4>
+                    <p>Quality meat selected for freshness and excellent value.</p>
+                    <a href="{% url 'meat' %}" class="text-primary">Explore meat</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="border rounded p-4 h-100">
+                    <i class="fa fa-leaf fa-2x text-primary mb-3"></i>
+                    <h4>Vegan</h4>
+                    <p>Plant-based choices for delicious everyday meals.</p>
+                    <a href="{% url 'vegan' %}" class="text-primary">Explore vegan</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="border rounded p-4 h-100">
+                    <i class="fa fa-shopping-basket fa-2x text-primary mb-3"></i>
+                    <h4>More products</h4>
+                    <p>Discover poultry, fish and other kitchen favourites.</p>
+                    <a href="{% url 'products' %}" class="text-primary">View all</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid bg-light py-5">
+    <div class="container">
+        <div class="row g-4 text-center">
+            <div class="col-md-4"><h3 class="text-primary">Fresh</h3><p class="mb-0">Products prepared and handled with care.</p></div>
+            <div class="col-md-4"><h3 class="text-primary">Convenient</h3><p class="mb-0">A simpler way to shop from wherever you are.</p></div>
+            <div class="col-md-4"><h3 class="text-primary">Responsible</h3><p class="mb-0">Supporting trusted producers and local communities.</p></div>
+        </div>
+    </div>
+</section>
+{% endblock %}

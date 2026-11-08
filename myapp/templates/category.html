@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ category }} | Sisenye Organics{% endblock %}
+
+{% block content %}
+<section class="container-fluid bg-light py-5">
+    <div class="container py-4">
+        <p class="section-title text-primary">Sisenye Organics shop</p>
+        <h1 class="display-4 mb-3">{{ category }}</h1>
+        <p class="lead mb-0">{{ description }}</p>
+    </div>
+</section>
+<section class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-4">
+            {% for product in products %}
+            <div class="col-md-6 col-lg-4">
+                <article class="card product-card border-0 shadow-sm h-100">
+                    {% if product.image %}
+                    <img src="{% static product.image %}" class="card-img-top product-image" alt="{{ product.name }}" loading="lazy">
+                    {% endif %}
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="mb-3">
+                            <i class="{{ product.icon }} fa-2x text-primary"></i>
+                        </div>
+                        <h3>{{ product.name }}</h3>
+                        <p>{{ product.description }}</p>
+                        <strong class="text-primary mt-auto">{{ product.price }}</strong>
+                        <button class="btn btn-secondary rounded-pill d-block mt-3" type="button">Add to enquiry</button>
+                    </div>
+                </article>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
